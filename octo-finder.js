@@ -32,7 +32,10 @@ function findJavaScriptHaters (octos) {
 }
 
 function findOctoLangages (octos) {
-  return ''
+  return _(octos)
+    .flatMap('langages')
+    .uniq()
+    .value()
 }
 
 function findTheMostAppreciatedOcto (octos) {

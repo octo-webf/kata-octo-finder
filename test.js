@@ -14,7 +14,7 @@ describe('Exploring the octo world', () => {
     expect(octoFinder.findJavaScriptHaters(users))
       .toEqual(['Nelson', 'Mila'].reverse())
   })
-  it('should find all the langages that octos like, without duplications', function () {
+  it.only('should find all the langages that octos like, without duplications', function () {
     expect(octoFinder.findOctoLangages(users))
       .toEqual(['javascript', 'node', 'java', 'c#', 'php', 'ruby', 'python'])
   })

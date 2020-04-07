@@ -12,7 +12,7 @@ describe('Exploring the octo world', () => {
   })
   it('should find octos who like java and dont like javascript or node', function () {
     expect(octoFinder.findJavaScriptHaters(users))
-      .toEqual(['Nelson', 'Mila'])
+      .toEqual(expect.arrayContaining(['Nelson', 'Mila']))
   })
   it('should find all the langages that octos like, without duplications', function () {
     expect(octoFinder.findOctoLangages(users))

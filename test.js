@@ -18,9 +18,9 @@ describe('Exploring the octo world', () => {
     expect(octoFinder.findOctoLangages(users))
       .toEqual(['javascript', 'node', 'java', 'c#', 'php', 'ruby', 'python'])
   })
-  it('should find the most appreciated octo', function () {
+  it.only('should find the most appreciated octo', function () {
     expect(octoFinder.findTheMostAppreciatedOcto(users))
-      .toEqual({ id: 2, name: 'Pierrette' })
+      .toEqual('PBB')
   })
   it('should find the biggest tribe', function (users) {
     expect(octoFinder.findTheBiggestTribe(users))

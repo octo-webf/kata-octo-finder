@@ -39,7 +39,10 @@ function findOctoLangages (octos) {
 }
 
 function findTheMostAppreciatedOcto (octos) {
-  return ''
+  return _(octos)
+    .groupBy('favoriteCoworker.polygram')
+    .entries()
+    .maxBy(([, count]) => _.size(count))[0]
 }
 
 function findTheBiggestTribe (octos) {

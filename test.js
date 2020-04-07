@@ -2,7 +2,7 @@ const octoFinder = require('./octo-finder')
 const users = require('./octos')
 
 describe('Exploring the octo world', () => {
-  it('should return all octos from the WEBF tribe', function () {
+  it.only('should return all octos from the WEBF tribe', function () {
     expect(octoFinder.findWebfOctos(users))
       .toEqual(['Pierrette', 'Antoine', 'Léo', 'Brandone'])
   })

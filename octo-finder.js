@@ -2,31 +2,31 @@
 const _ = require('lodash')
 
 function findWebfOctos (octos) {
-  return octos
+  return ''
 }
 
 function findSocialOctos (octos) {
-  return octos
+  return ''
 }
 
 function findJavaScriptHaters (octos) {
-  return octos
+  return ''
 }
 
 function findOctoLangages (octos) {
-  return octos
+  return ''
 }
 
 function findTheMostAppreciatedOcto (octos) {
-  return octos
+  return ''
 }
 
 function findTheBiggestLeague (octos) {
-  return octos
+  return ''
 }
 
 function findAllPolygrams (octos) {
-  return octos
+  return ''
 }
 
 module.exports = {

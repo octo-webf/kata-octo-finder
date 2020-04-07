@@ -6,9 +6,9 @@ describe('Exploring the octo world', () => {
     expect(octoFinder.findWebfOctos(users))
       .toEqual(['Pierrette', 'Antoine', 'Léo', 'Brandone'])
   })
-  it('should return all octos whose best friend is NOT in their own tribe', function () {
+  it.only('should return all octos whose best friend is NOT in their own tribe', function () {
     expect(octoFinder.findSocialOctos(users))
-      .toEqual(['Arnaud', 'Mila', 'Joseph', 'Léo', 'Red'])
+      .toEqual(['Arnaud', 'Mila', 'Léo'])
   })
   it('should find octos who like java and dont like javascript or node', function () {
     expect(octoFinder.findJavaScriptHaters(users))

@@ -1,6 +1,11 @@
 // Lodash might come in handy
 const _ = require('lodash')
 
+// Functional data-last primitive for more expressiveness
+// These might be ugly to look at but can be used extensively elsewhere once defined
+const hasFavoriteCoworker = (octo) => Boolean(octo.favoriteCoworker)
+const isEqual = (path1, path2) => (obj) => _.eq(_.get(obj, path1), _.get(obj, path2))
+
 function findWebfOctos (octos) {
   return _(octos)
     .filter({ tribe: 'WEBF' })
@@ -9,7 +14,11 @@ function findWebfOctos (octos) {
 }
 
 function findSocialOctos (octos) {
-  return ''
+  return _(octos)
+    .filter(hasFavoriteCoworker)
+    .reject(isEqual('tribe', 'favoriteCoworker.tribe'))
+    .map('name')
+    .value()
 }
 
 function findJavaScriptHaters (octos) {

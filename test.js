@@ -22,8 +22,8 @@ describe('Exploring the octo world', () => {
     expect(octoFinder.findTheMostAppreciatedOcto(users))
       .toEqual({ id: 2, name: 'Pierrette' })
   })
-  it('should find the biggest league', function (users) {
-    expect(octoFinder.findTheBiggestLeague(users))
+  it('should find the biggest tribe', function (users) {
+    expect(octoFinder.findTheBiggestTribe(users))
       .toEqual('WEBF')
   })
   it('should find the number of distinct octos by polygram sorted like expected', function () {

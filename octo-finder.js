@@ -21,7 +21,7 @@ function findTheMostAppreciatedOcto (octos) {
   return ''
 }
 
-function findTheBiggestLeague (octos) {
+function findTheBiggestTribe (octos) {
   return ''
 }
 
@@ -35,6 +35,6 @@ module.exports = {
   findJavaScriptHaters,
   findOctoLangages,
   findTheMostAppreciatedOcto,
-  findTheBiggestLeague,
+  findTheBiggestTribe,
   findAllPolygrams
 }

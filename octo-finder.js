@@ -5,6 +5,8 @@ const _ = require('lodash')
 // These might be ugly to look at but can be used extensively elsewhere once defined
 const hasFavoriteCoworker = (octo) => Boolean(octo.favoriteCoworker)
 const isEqual = (path1, path2) => (obj) => _.eq(_.get(obj, path1), _.get(obj, path2))
+const includeLangage = (langage) => (octo) => _.includes(octo.langages, langage)
+const includeLangages = (langages) => (octo) => _.some(langages, (l) => includeLangage(l)(octo))
 
 function findWebfOctos (octos) {
   return _(octos)
@@ -22,7 +24,11 @@ function findSocialOctos (octos) {
 }
 
 function findJavaScriptHaters (octos) {
-  return ''
+  return _(octos)
+    .filter(includeLangage('java'))
+    .reject(includeLangages(['javascript', 'node']))
+    .map('name')
+    .value()
 }
 
 function findOctoLangages (octos) {

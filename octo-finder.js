@@ -2,7 +2,10 @@
 const _ = require('lodash')
 
 function findWebfOctos (octos) {
-  return ''
+  return _(octos)
+    .filter({ tribe: 'WEBF' })
+    .map('name')
+    .value()
 }
 
 function findSocialOctos (octos) {
